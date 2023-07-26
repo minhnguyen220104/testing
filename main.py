@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-from stravaio import strava_oauth2
+from stravaio import StravaIO
 
 app = FastAPI()
 
-@app.get("/auth")
-def strava_auth():
-    authorization = strava_oauth2(client_id=110799, client_secret='8bac955bd9f61f2ce630f446dc594682afe3901a')
-    return {"Authorization": authorization}
+@app.get("/activities")
+def strava_activities():
+    client = StravaIO(access_token='07691bb1188eca9c01ccdb69f8b1f36a0d596a57')
+    list_activities = client.get_logged_in_athlete_activities()
+    return {"Activities": list_activities}
