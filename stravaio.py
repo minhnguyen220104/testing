@@ -363,7 +363,7 @@ def _request_strava_authorize(client_id, port):
     values_url = urllib.parse.urlencode(params_oauth)
     base_url = 'https://www.strava.com/oauth/authorize'
     rv = base_url + '?' + values_url
-    webbrowser.get(rv).open(rv)
+    webbrowser.get('Google Chrome').open(rv)
     return None
 
 
