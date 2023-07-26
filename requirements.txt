@@ -1,5 +1,3 @@
 fastapi
 uvicorn
-loguru
-maya
-swagger_client
+stravaio
