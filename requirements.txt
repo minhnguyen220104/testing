@@ -1,3 +1,4 @@
 fastapi
 uvicorn
-stravaio
+loguru
+maya
