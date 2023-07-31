@@ -27,7 +27,7 @@ def strava_oauth2(client_id=None, client_secret=None):
         if client_secret is None:
             raise ValueError('client_secret is None')
     
-    port = 8000
+    port = 8080
     _request_strava_authorize(client_id, port)
 
     logger.info(f"serving at port {port}")
