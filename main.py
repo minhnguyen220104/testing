@@ -1,7 +1,7 @@
-from fastapi import FastAPI, HTTPException, Form
+from fastapi import FastAPI, HTTPException
+from stravaio import strava_oauth2
 from fastapi.middleware.cors import CORSMiddleware
-import requests
-import json
+
 
 app = FastAPI()
 
