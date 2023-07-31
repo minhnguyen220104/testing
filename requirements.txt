@@ -1,4 +1,5 @@
 fastapi
 uvicorn
-stravaio
+loguru
+requests
 python-multipart
