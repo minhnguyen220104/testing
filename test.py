@@ -100,5 +100,3 @@ def run_server_and_wait_for_token(port, client_id, client_secret):
         
         return data
     
-authorization = strava_oauth2(client_id = 110799, client_secret="8bac955bd9f61f2ce630f446dc594682afe3901a")
-print(authorization)
