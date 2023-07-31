@@ -1,4 +1,4 @@
 fastapi
 uvicorn
-requests
+stravaio
 python-multipart
