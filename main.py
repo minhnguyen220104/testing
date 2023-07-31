@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from stravaio import strava_oauth2
+from test import strava_oauth2
 from fastapi.middleware.cors import CORSMiddleware
 
 
