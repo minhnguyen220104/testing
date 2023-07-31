@@ -5,17 +5,11 @@ import json
 
 app = FastAPI()
 
-# Replace this with your actual reCAPTCHA v3 secret key
-RECAPTCHA_SECRET_KEY = "6Lfv4kwnAAAAAA9PQw7wNkyRo6o4BtP_mT6bj66Q"
-
-@app.post("/verify-recaptcha")
-async def verify_recaptcha(token: str = Form(...)):
+@app.post("/strava")
+def authorize():
     try:
-        r = requests.post('https://www.google.com/recaptcha/api/siteverify',
-                      data = {'secret' : "6Lfv4kwnAAAAAA9PQw7wNkyRo6o4BtP_mT6bj66Q",
-                              'response' :token})
-        google_response = json.loads(r.text)
-        return  google_response
+        authorization = strava_oauth2(client_id=110799, client_secret='8bac955bd9f61f2ce630f446dc594682afe3901a')
+        return  authorization
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
